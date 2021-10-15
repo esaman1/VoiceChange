@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.axet:vorbis:1.0.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d7e4d99ed45efc6330198426b16214c0/jetified-vorbis-1.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c39baff3055b3a4a87bc1dbddd90b0/jetified-vorbis-1.0.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c39baff3055b3a4a87bc1dbddd90b0/jetified-vorbis-1.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c39baff3055b3a4a87bc1dbddd90b0/jetified-vorbis-1.0.5/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/vorbis/1.0.5/e5b92cc05a5b1da8744e61cec8634c84100335c5/vorbis-1.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/vorbis/1.0.5/228fa97e4012fa14f695b6d270d83c67d1227ed0/vorbis-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_30dp"
+        android:gravity="center"
+        android:text="My Creation"
+        android:textColor="@color/color444E72"
+        android:textSize="20.0sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlWave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+        <com.voicerecorder.axet.audiolibrary.trimmer.customAudioViews.WaveformView
+            android:id="@+id/audioWaveform"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="15dp" />
+
+        <com.voicerecorder.axet.audiolibrary.trimmer.customAudioViews.MarkerView
+            android:id="@+id/markerStart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@+id/audioWaveform"
+            android:layout_marginStart="16dp"
+            android:contentDescription="start marker"
+            android:nextFocusDown="@+id/markerEnd"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_marker_end" />
+
+
+        <com.voicerecorder.axet.audiolibrary.trimmer.customAudioViews.MarkerView
+            android:id="@+id/markerEnd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@+id/audioWaveform"
+            android:layout_marginStart="100dp"
+            android:contentDescription="end marker"
+            android:nextFocusUp="@+id/markerStart"
+            android:nextFocusDown="@+id/info"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_marker_start" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_bg_zoom"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/audioWaveform"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:weightSum="2"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivZoomIn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/ic_zoom_in"
+                android:layout_weight="1"
+                android:padding="@dimen/_7dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivZoomOut"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/ic_zoom_out"
+                android:layout_weight="1"
+                android:padding="@dimen/_7dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Start: "
+        android:textColor="@color/color8E7CFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlWave" />
+
+    <TextView
+        android:id="@+id/txtStartPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:text="@string/text_start_timer"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/txtStart"
+        app:layout_constraintTop_toTopOf="@+id/txtStart" />
+
+    <TextView
+        android:id="@+id/txtEndPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:gravity="center"
+        android:text="@string/text_start_timer"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtStart" />
+
+    <TextView
+        android:id="@+id/txtEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End: "
+        android:textColor="@color/color8E7CFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtEndPosition"
+        app:layout_constraintTop_toTopOf="@+id/txtEndPosition" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_backward"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAudioPlay"
+        app:layout_constraintEnd_toStartOf="@+id/imgAudioPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgAudioPlay" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgAudioPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_play_circle"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStart" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAudioPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAudioPlay"
+        app:layout_constraintTop_toTopOf="@+id/imgAudioPlay" />
+
+    <Button
+        android:id="@+id/btnAudioCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_btn"
+        android:background="@drawable/bg_button_trim"
+        android:text="@string/cancel"
+        android:textColor="@color/color8E7CFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_btn"
+        android:background="@drawable/bg_button_trim"
+        android:text="@string/reset"
+        android:textColor="@color/color8E7CFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_btn"
+        android:background="@drawable/bg_button_trim_cut"
+        android:text="@string/cut"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.axet:liblame:3.100@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1902b8687d1ed85a8cd512f751514393/jetified-liblame-3.100/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/322348480d082d20597ab026ac3f055b/jetified-liblame-3.100/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/322348480d082d20597ab026ac3f055b/jetified-liblame-3.100/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/322348480d082d20597ab026ac3f055b/jetified-liblame-3.100/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/liblame/3.100/a1816face7cb282157eb76eda76a28f8d8b4b340/liblame-3.100-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/liblame/3.100/97810bf4c6059738a066074d957b7d31db18d97/liblame-3.100-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

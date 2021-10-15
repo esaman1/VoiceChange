@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "211764989772",
+    "project_id": "voicechange-6130d",
+    "storage_bucket": "voicechange-6130d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211764989772:android:ac509af3d816e8c07549e9",
+        "android_client_info": {
+          "package_name": "com.voicechanger.soundeffect.soundchanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211764989772-otmos1vhr851n7meltf382u0blrf6870.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.voicechanger.soundeffect.soundchanger",
+            "certificate_hash": "31bc1d080205915326a474a55692b4d524819e40"
+          }
+        },
+        {
+          "client_id": "211764989772-ics2gqt9snp8irf32qp5dhco5ofglqe8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgCVqyLiBAJWPYTjz2tAlaiL_oOZST2TI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211764989772-ics2gqt9snp8irf32qp5dhco5ofglqe8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

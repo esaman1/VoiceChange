@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/bg_dialog_confirm">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:padding="@dimen/_10dp"
+        tools:text="abcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:gravity="center"
+        android:singleLine="true"
+        android:background="@drawable/bg_edt_dialog_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        />
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@drawable/bg_iv_skip"
+        android:text="@string/text_skip"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/color80151920"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/etContent"
+        app:layout_constraintTop_toBottomOf="@+id/etContent"
+        app:layout_constraintEnd_toStartOf="@+id/tvOke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvOke"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_4dp"
+        android:background="@drawable/bg_iv_ok"
+        android:text="@string/text_ok"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvSkip"
+        app:layout_constraintEnd_toEndOf="@+id/etContent"
+        app:layout_constraintTop_toTopOf="@+id/tvSkip"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSkip"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

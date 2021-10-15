@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
+
+    <style name="RecThemeLight" parent="AppThemeLight">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="recColor">@color/audio_rec_color</item>
+        <item name="cutColor">@color/audio_cut_color</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="SearchViewTheme" parent="Widget.AppCompat.SearchView">-->
+        <item name="searchHintIcon">@null</item>
+        <item name="closeIcon">@drawable/ic_close_24dp</item>
+    </style>
+
+    <style name="RecThemeLight.NoActionBar">
+        <item name="searchViewStyle">@style/SearchViewTheme</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+        <!--        <item name="alertDialogTheme">@style/AlertDialogTheme</item>-->
+    </style>
+
+    <style name="full_screen_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="audio" parent="Theme.AppCompat.Light.NoActionBar"></style>
+</resources>

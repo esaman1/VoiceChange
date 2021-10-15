@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.axet:opus:1.0.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af8ed55a5fe80167eede4dca41e8f78f/jetified-opus-1.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91ef3643649526e74ecab15f79d0cfe2/jetified-opus-1.0.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91ef3643649526e74ecab15f79d0cfe2/jetified-opus-1.0.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91ef3643649526e74ecab15f79d0cfe2/jetified-opus-1.0.5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/opus/1.0.5/eb010315e4ef734a5abbc3a3b2e4fe6d0a7f3598/opus-1.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/opus/1.0.5/f1944c1b245e104171f694ea3101b560af0c51f0/opus-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.axet:java-flac-encoder:0.3.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/java-flac-encoder/0.3.8/93e27d6d7884f5c8ce68762805554ca038f83840/java-flac-encoder-0.3.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/java-flac-encoder/0.3.8/4af608c483b212d254106472ec72e720ed631ed/java-flac-encoder-0.3.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/java-flac-encoder/0.3.8/63f7557ce5c87e9a81e5a112ce99a7724dc47d0e/java-flac-encoder-0.3.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

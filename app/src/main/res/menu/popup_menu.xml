@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/edit_item"
+        android:title="Edit"
+        android:icon="@drawable/ic_edit2"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/share_item"
+        android:title="Share"
+        android:icon="@drawable/ic_share2"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/delete_item"
+        android:title="Delete"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/Ringtone"
+        android:title="Set as Ringtone"
+        android:icon="@drawable/ic_ringtone"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/notification"
+        android:title="Set as Notification"
+        android:icon="@drawable/ic_notification"
+        app:showAsAction="always"/>
+</menu>

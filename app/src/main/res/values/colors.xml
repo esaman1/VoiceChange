@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ba4374</color>
+    <color name="colorPrimary">#ba4374</color>
+    <color name="colorPrimaryDark">#99355e</color>
+    <color name="white">#fff</color>
+    <color name="icon">#803A98</color>
+    <color name="audio_rec_color">#4DD0E1</color>
+    <color name="audio_cut_color">#A5A5A5</color>
+    <color name="wave_unselected_bg">#0D000000</color>
+    <color name="green_bg">#4DC591</color>
+    <color name="black_A50">#80000000</color>
+    <color name="time_code_text">#0B2239</color>
+    <color name="text_primary">#000000</color>
+    <color name="color222222">#222222</color>
+    <color name="color8CB369">#8CB369</color>
+    <color name="colorE26D5C">#E26D5C</color>
+    <color name="color_3D4A8B">#3D4A8B</color>
+    <color name="color756CFB">#756CFB</color>
+    <color name="color444E72">#444E72</color>
+    <color name="colorFAFAFA">#FAFAFA</color>
+    <color name="color0D7B97CE">#0D7B97CE</color>
+    <color name="color40566789">#40566789</color>
+    <color name="color80151920">#80151920</color>
+    <color name="color8E7CFF">#8E7CFF</color>
+    <color name="colorE5E5E5">#E5E5E5</color>
+    <color name="colorA0CED9">#A0CED9</color>
+</resources>

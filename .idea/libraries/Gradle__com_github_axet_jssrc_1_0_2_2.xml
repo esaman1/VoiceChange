@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.axet:jssrc:1.0.2-2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/jssrc/1.0.2-2/f39396665ba2f3abaffb5f3447a79551b4276ef4/jssrc-1.0.2-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/jssrc/1.0.2-2/d0e40f7f3e2174ce97e2e0207d93c84688eee54d/jssrc-1.0.2-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/jssrc/1.0.2-2/ca9cbe98e9537f58303ff833aebebcc18066a59d/jssrc-1.0.2-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

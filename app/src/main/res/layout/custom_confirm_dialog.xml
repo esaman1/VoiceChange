@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@drawable/bg_dialog_confirm">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Enter Name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:padding="@dimen/_10dp"
+        tools:text="abcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:gravity="center"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        />
+
+    <TextView
+        android:id="@+id/tvOke"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@drawable/bg_iv_skip"
+        android:text="@string/text_ok"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/color80151920"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvCancel"
+        app:layout_constraintStart_toStartOf="@+id/tvContent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_4dp"
+        android:background="@drawable/bg_iv_ok"
+        android:text="@string/text_cancel"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvOke"
+        app:layout_constraintEnd_toEndOf="@+id/tvContent"
+        app:layout_constraintTop_toTopOf="@+id/tvOke"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOke"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
