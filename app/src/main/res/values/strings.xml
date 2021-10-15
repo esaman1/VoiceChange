@@ -14,9 +14,9 @@
     <string name="reset">Reset</string>
     <string name="cut">Cut</string>
     <string name="text_voice_changer">VOICE CHANGER</string>
-    <string name="text_intro1">Directly record audio and edit by adding effects</string>
-    <string name="text_intro2">Open audio on your  smartphone and add effects to this audio</string>
-    <string name="text_intro3">Enable you to trim audio easily</string>
+    <string name="text_intro1">Directly record audio and \n edit by adding effects</string>
+    <string name="text_intro2">Open audio on your \n smartphone and add effects \n to this audio</string>
+    <string name="text_intro3">Enable you to trim \n audio easily</string>
     <string name="text_start_recording">Start Recording</string>
     <string name="text_my_creation">My Creation</string>
     <string name="text_start_timer">00:00:00</string>
