@@ -47,7 +47,7 @@ final class Wav extends AbstractRecorder {
 //                recordFileManagerIml.save(b.getPath());
 //            });
             Log.d("duonghq", "writeWavHeader: ");
-            insertToMediaStore(this.b);
+           // insertToMediaStore(this.b);
 
         } catch (IOException e) {
             e.printStackTrace();

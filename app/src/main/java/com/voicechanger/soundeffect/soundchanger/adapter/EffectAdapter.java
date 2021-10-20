@@ -81,14 +81,14 @@ public class EffectAdapter extends DBBaseAdapter {
         viewHolder.mBtnSave.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 if (EffectAdapter.this.onEffectListener != null) {
-                    EffectAdapter.this.onEffectListener.onShareEffect(effectObject);
+                    EffectAdapter.this.onEffectListener.onSaveEffect(effectObject);
                 }
             }
         });
         viewHolder.mBtnShare.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 if (EffectAdapter.this.onEffectListener != null) {
-                    EffectAdapter.this.onEffectListener.onSaveEffect(effectObject);
+                    EffectAdapter.this.onEffectListener.onShareEffect(effectObject);
                 }
             }
         });

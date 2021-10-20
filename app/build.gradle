@@ -24,12 +24,12 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -83,4 +83,6 @@ dependencies {
     implementation 'com.github.Namdh1212:AdmobUtilsLibrary:4.5.5'
     //multidex
     implementation "androidx.multidex:multidex:2.0.1"
+
+    implementation 'com.tbuonomo:dotsindicator:4.2'
 }

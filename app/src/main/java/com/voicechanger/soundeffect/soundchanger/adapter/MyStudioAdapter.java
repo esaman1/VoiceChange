@@ -26,6 +26,7 @@ import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
 import com.voicechanger.soundeffect.soundchanger.R;
 import com.voicechanger.soundeffect.soundchanger.activity.MyStudioActivity;
 import com.voicechanger.soundeffect.soundchanger.activity.TrimAudioActivity;
+import com.voicechanger.soundeffect.soundchanger.dialog.MediaDialog;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -73,10 +74,17 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
         myViewHolder.ll.setOnClickListener(new OnClickListener() {
             @SuppressLint("WrongConstant")
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setFlags(268435456);
-                intent.setDataAndType(Uri.fromFile(file), "audio/*");
-                MyStudioAdapter.this.context.startActivity(intent);
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setFlags(268435456);
+//                intent.setDataAndType(Uri.fromFile(file), "audio/*");
+//                MyStudioAdapter.this.context.startActivity(intent);
+                MediaDialog mediaDialog = new MediaDialog(context, stringBuilder.toString());
+                mediaDialog.setCancelable(true);
+                mediaDialog.show();
+                Window window = mediaDialog.getWindow();
+                window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
+
             }
         });
 
@@ -165,7 +173,7 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
 
         //If the position of menu icon is in the bottom 2/3rd part of the screen then we provide menu height as offset  but in negative as we want to open our menu to the top
         if (positionOfIcon > height) {
-            popupWindow.showAsDropDown(myViewHolder.ivMore, 0, -350);
+            popupWindow.showAsDropDown(myViewHolder.ivMore, 0, -450);
         } else {
             popupWindow.showAsDropDown(myViewHolder.ivMore, 0, 0);
         }

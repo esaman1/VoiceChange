@@ -17,7 +17,7 @@ import com.voicechanger.soundeffect.soundchanger.activity.SplashScreenActivity;
 public class MyApplication extends AdsMultiDexApplication {
     public static final String CHANNEL_ID = "push_notification_id";
     public static Context appContext;
-    boolean isShowAds = true;
+    boolean isShowAds = false;
     boolean isShowAdsResume = true;
 
     @Override
@@ -27,14 +27,14 @@ public class MyApplication extends AdsMultiDexApplication {
         appContext = getApplicationContext();
         PurchaseUtils.getInstance().initBilling(this,getString(R.string.play_console_license));
 
-        if (PurchaseUtils.getInstance().isSubscriptiond(getString(R.string.premium))) {
-            isShowAds = false;
-        }else {
-            isShowAds = true;
-        }
+//        if (PurchaseUtils.getInstance().isSubscriptiond(getString(R.string.premium))) {
+//            isShowAds = false;
+//        }else {
+//            isShowAds = true;
+//        }
         PurchaseUtils.getInstance().isPurchased(getString(R.string.product_id));
 
-        AdmodUtils.getInstance().initAdmob(this, 20000,false, isShowAds);
+        AdmodUtils.getInstance().initAdmob(this, 10000,false, false);
         if (isShowAdsResume) {
             AppOpenManager.getInstance().init(this, getString(R.string.test_ads_admob_app_open));
             AppOpenManager.getInstance().disableAppResumeWithActivity(SplashScreenActivity.class);

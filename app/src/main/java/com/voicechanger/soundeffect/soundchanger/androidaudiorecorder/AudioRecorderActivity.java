@@ -73,16 +73,8 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
 
     private void pauseRecording() {
         this.isRecording = false;
-        if (!isFinishing()) {
-//            this.saveMenuItem.setVisible(true);
-        }
-//        this.statusView.setText(R.string.aar_paused);
-//        this.statusView.setVisibility(View.VISIBLE);
         this.restartView.setVisibility(View.VISIBLE);
-        this.btn_ok.setVisibility(View.VISIBLE);
-//        this.playView.setVisibility(View.VISIBLE);
         this.recordView.setImageResource(R.drawable.img_play);
-//        this.playView.setImageResource(R.drawable.ic_playyy);
         if (this.visualizerHandler != null) {
             this.visualizerHandler.stop();
         }
@@ -406,8 +398,10 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
         Util.wait(100, new Runnable() {
             public void run() {
                 if (AudioRecorderActivity.this.isRecording) {
+                    btn_ok.setVisibility(View.VISIBLE);
                     AudioRecorderActivity.this.pauseRecording();
                 } else {
+                    btn_ok.setVisibility(View.INVISIBLE);
                     AudioRecorderActivity.this.resumeRecording();
                 }
             }

@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:srcCompat="@drawable/btn_ok"
+        android:visibility="invisible"
         android:background="@android:color/transparent"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"

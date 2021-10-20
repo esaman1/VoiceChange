@@ -27,7 +27,6 @@ import java.util.ArrayList;
 
 public class MyStudioActivity extends AppCompatActivity {
     ImageView ivBack;
-    private AdView mAdView;
     RecyclerView.LayoutManager layoutManager;
     private RelativeLayout ll_Ad_Progress;
     ArrayList<String> myStudio;
@@ -42,9 +41,6 @@ public class MyStudioActivity extends AppCompatActivity {
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_my_studio);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         StrictMode.setVmPolicy(new Builder().build());
         int i = 0;

@@ -173,8 +173,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="img_intro3" />
-                            <entry key="sourceFile" value="C:\Users\ADMIN\Downloads\img_intro3.svg" />
+                            <entry key="outputName" value="ic_thumb" />
+                            <entry key="sourceFile" value="C:\Users\ADMIN\Downloads\ic_thumb.svg" />
                           </map>
                         </option>
                       </PersistentState>

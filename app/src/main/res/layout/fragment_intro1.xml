@@ -7,14 +7,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorA0CED9">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/img_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        app:layout_constraintGuide_percent="0.83"
+        android:orientation="horizontal"
         />
 
     <TextView
@@ -26,7 +24,7 @@
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/ivNext"
+        app:layout_constraintBottom_toTopOf="@+id/glView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/white"

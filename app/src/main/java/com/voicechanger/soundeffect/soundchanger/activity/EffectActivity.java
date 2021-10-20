@@ -59,7 +59,6 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
     private String mNameExportVoice;
     private String mPathAudio;
     private Uri uri;
-    private AdView mAdView;
     private ConfirmSaveAudioDialog dialogConfirm;
 
 
@@ -253,9 +252,6 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_effect);
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
 
 
@@ -365,7 +361,7 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
         this.mEffectApdater.notifyDataSetChanged();
     }
 
-    public void onSaveEffect(EffectObject effectObject) {
+    public void onShareEffect(EffectObject effectObject) {
         if (this.mDBMedia != null) {
             resetStateAudio();
         }
@@ -380,7 +376,6 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
                     File file = getExternalFilesDir(Environment.DIRECTORY_MUSIC + File.separator + "CallVoiceChanger");
                     File file2 = new File(file.getPath(), stringBuilder2);
                     if (file2.exists() && file2.isFile()) {
-                        EffectActivity.this.showToast(String.format(EffectActivity.this.getString(R.string.info_save_voice), file2.getAbsolutePath()));
                         EffectActivity.this.shareFile(stringBuilder2);
                     }
                 }
@@ -388,7 +383,7 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
         }
     }
 
-    public void onShareEffect(final EffectObject effectObject) {
+    public void onSaveEffect(final EffectObject effectObject) {
         if (this.mDBMedia != null) {
             resetStateAudio();
         }
@@ -397,7 +392,7 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
         dialogConfirm = new ConfirmSaveAudioDialog(this, new ConfirmSaveAudioDialog.CallBackConfirmSaveDialogListener() {
             @Override
             public void onSelectSkip() {
-                setupSaveEffect(effectObject);
+               // setupSaveEffect(effectObject);
                 dialogConfirm.dismiss();
             }
 
@@ -422,29 +417,6 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
         dialogConfirm.show();
         Window window = dialogConfirm.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-//        showDialogEnterName(new IDBCallback() {
-//            public void onAction() {
-//                if (EffectActivity.this.mDBMedia != null) {
-//                    EffectActivity effectActivity = EffectActivity.this;
-//                    String access$500 = EffectActivity.this.mNameExportVoice;
-//                    effectActivity.startSaveEffect(access$500, effectObject, new IDBCallback() {
-//                        public void onAction() {
-//                            String file = Environment.getExternalStorageDirectory().toString();
-//                            StringBuilder stringBuilder = new StringBuilder();
-//                            stringBuilder.append(file);
-//                            stringBuilder.append("/CallVoiceChanger");
-//                            File file2 = new File(stringBuilder.toString(), EffectActivity.this.mNameExportVoice);
-//                            if (!file2.exists()) {
-//                                file2.mkdirs();
-//                            }
-//                            if (file2.exists() && file2.isFile()) {
-//                                EffectActivity.this.showToast(String.format(EffectActivity.this.getString(R.string.info_save_voice), new Object[]{file2.getAbsolutePath()}));
-//                            }
-//                        }
-//                    });
-//                }
-//            }
-//        });
     }
 
     private void setupSaveEffect(EffectObject effectObject){
@@ -457,7 +429,7 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
                         file2.mkdirs();
                     }
                     if (file2.exists() && file2.isFile()) {
-                        insertToMediaStore(file2);
+                        //insertToMediaStore(file2);
                         EffectActivity.this.showToast(String.format(EffectActivity.this.getString(R.string.info_save_voice), file2.getAbsolutePath()));
                     }
                 }

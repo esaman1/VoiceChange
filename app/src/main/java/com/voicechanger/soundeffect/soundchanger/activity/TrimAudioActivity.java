@@ -544,7 +544,8 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
             int now = mPlayer.getCurrentPosition();
             int frames = audioWaveform.millisecsToPixels(now);
             audioWaveform.setPlayback(frames);
-            Log.e("mWidth >> ", "" + mWidth);
+            double startTimePlay = mPlayer.getCurrentPosition() * 1.0 / 1000;
+            txtStartPosition.setText(formatTime(audioWaveform.secondsToPixels(startTimePlay)));
             setOffsetGoalNoUpdate(frames - mWidth / 2);
             if (now >= mPlayEndMillSec) {
                 handlePause();

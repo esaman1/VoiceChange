@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.vapp.admoblibrary.ads.AdCallback;
 import com.vapp.admoblibrary.ads.AdmodUtils;
 import com.voicechanger.soundeffect.soundchanger.Common;
@@ -22,6 +23,7 @@ public class AppIntroActivity extends AppCompatActivity {
     private ImageView ivNext;
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
+    private DotsIndicator dotsIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class AppIntroActivity extends AppCompatActivity {
         ivNext = findViewById(R.id.ivNext);
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager2);
+        dotsIndicator = findViewById(R.id.dotsIndicator);
 
         ivNext.setOnClickListener(v -> {
             if (tabLayout.getSelectedTabPosition() < 2) {
@@ -40,6 +43,7 @@ public class AppIntroActivity extends AppCompatActivity {
         });
 
         viewPager2.setAdapter(new ViewPager2Adapter(this));
+        dotsIndicator.setViewPager2(viewPager2);
         new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
             // Disable touch for Tab Layout
             tab.view.setClickable(false);
