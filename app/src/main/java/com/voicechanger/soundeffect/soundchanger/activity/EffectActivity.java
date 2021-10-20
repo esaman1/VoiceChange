@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Build.VERSION;
@@ -22,10 +24,9 @@ import android.widget.ListView;
 
 import androidx.core.content.FileProvider;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.un4seen.bass.BASS;
 import com.voicechanger.soundeffect.soundchanger.MyApplication;
+import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
 import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmSaveAudioDialog;
 import com.voicechanger.soundeffect.soundchanger.R;
 import com.voicechanger.soundeffect.soundchanger.adapter.EffectAdapter;
@@ -59,7 +60,8 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
     private String mNameExportVoice;
     private String mPathAudio;
     private Uri uri;
-    private ConfirmSaveAudioDialog dialogConfirm;
+    private ConfirmSaveAudioDialog confirmSaveAudioDialog;
+    private ConfirmDialog confirmDialog;
 
 
     class C09121 implements IDBCallback {
@@ -389,11 +391,11 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
         }
         SoundManager.getInstance().play(this, R.raw.click);
         this.mNameExportVoice = String.format(IVoiceChangerConstants.FORMAT_NAME_VOICE, String.valueOf(System.currentTimeMillis() / 1000));
-        dialogConfirm = new ConfirmSaveAudioDialog(this, new ConfirmSaveAudioDialog.CallBackConfirmSaveDialogListener() {
+        confirmSaveAudioDialog = new ConfirmSaveAudioDialog(this, new ConfirmSaveAudioDialog.CallBackConfirmSaveDialogListener() {
             @Override
             public void onSelectSkip() {
                // setupSaveEffect(effectObject);
-                dialogConfirm.dismiss();
+                confirmSaveAudioDialog.dismiss();
             }
 
             @Override
@@ -409,14 +411,43 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
                     effectActivity.mNameExportVoice = stringBuilder.toString();
 
                 }
-                setupSaveEffect(effectObject);
-                dialogConfirm.dismiss();
+
+
+                File file = getExternalFilesDir(Environment.DIRECTORY_MUSIC + File.separator + "CallVoiceChanger");
+                File fileNew = new File(file.getPath(), EffectActivity.this.mNameExportVoice);
+                if(fileNew.exists()){
+                    showExistingFileDialog(fileNew, effectObject);
+                } else {
+                    setupSaveEffect(effectObject);
+                }
+                confirmSaveAudioDialog.dismiss();
             }
         });
-        dialogConfirm.setCancelable(true);
-        dialogConfirm.show();
-        Window window = dialogConfirm.getWindow();
+        confirmSaveAudioDialog.setCancelable(true);
+        confirmSaveAudioDialog.show();
+        Window window = confirmSaveAudioDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    }
+
+    private void showExistingFileDialog(File outFile, EffectObject effectObject) {
+        confirmDialog = new ConfirmDialog(this, new ConfirmDialog.CallBackConfirmDialogListener() {
+            @Override
+            public void onSelectOk() {
+                outFile.delete();
+                setupSaveEffect(effectObject);
+                confirmDialog.dismiss();
+            }
+
+            @Override
+            public void onSelectCancel() {
+                confirmDialog.dismiss();
+            }
+        }, "", getResources().getString(R.string.override_file));
+        confirmDialog.show();
+        Window window = confirmDialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
     private void setupSaveEffect(EffectObject effectObject){

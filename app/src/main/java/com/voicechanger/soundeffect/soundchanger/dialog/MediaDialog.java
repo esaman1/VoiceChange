@@ -132,16 +132,18 @@ public class MediaDialog extends Dialog {
     private void startAudio() {
         if (!url.isEmpty()) {
             mediaPlayer = MediaPlayer.create(getContext(), Uri.parse(url));
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mediaPlayer.setVolume(100F, 100F);
-                    mediaPlayer.start();
-                    isCompleteAudio = false;
-                    sbAudio.setMax(mediaPlayer.getDuration());
-                    updateSeekBar();
-                }
-            });
+            if (mediaPlayer != null){
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.setVolume(100F, 100F);
+                        mediaPlayer.start();
+                        isCompleteAudio = false;
+                        sbAudio.setMax(mediaPlayer.getDuration());
+                        updateSeekBar();
+                    }
+                });
+            }
         }
     }
 

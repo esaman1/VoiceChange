@@ -376,6 +376,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         stringBuilder.append(file);
         stringBuilder.append("/Audio-");
         stringBuilder.append(path);
+        stringBuilder.append("raw");
         stringBuilder.append(IVoiceChangerConstants.AUDIO_RECORDER_FILE_EXT_MP3);
         PATH_AUDIO = stringBuilder.toString();
     }

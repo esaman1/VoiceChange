@@ -2,16 +2,18 @@ package com.voicechanger.soundeffect.soundchanger.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
@@ -29,10 +31,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.voicechanger.soundeffect.soundchanger.Common;
-import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
-import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmSaveAudioDialog;
 import com.voicechanger.soundeffect.soundchanger.R;
 import com.voicechanger.soundeffect.soundchanger.constants.IVoiceChangerConstants;
+import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
+import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmSaveAudioDialog;
 import com.voicechanger.soundeffect.soundchanger.dialog.LoadingDialog;
 import com.voicerecorder.axet.audiolibrary.trimmer.customAudioViews.MarkerView;
 import com.voicerecorder.axet.audiolibrary.trimmer.customAudioViews.SamplePlayer;
@@ -210,6 +212,7 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
     public void onBackPressed() {
 //        showAdsAndFinish();
         super.onBackPressed();
+        setResult(Activity.RESULT_OK);
     }
 
     private void showAdsAndFinish() {
@@ -306,7 +309,7 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
                 markerFocus(markerStart);
             }
         }
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.ivZoomIn:
                 waveformZoomIn();
                 break;
@@ -355,6 +358,7 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
         confirmSaveAudioDialog.show();
         Window window = confirmSaveAudioDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
 //    private void updateAudioTitle(String title) {
@@ -376,12 +380,8 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
 //            savingRecordDialog.setCancelable(false);
 //            savingRecordDialog.show();
 
-            loadingDialog = new LoadingDialog(this ,R.style.full_screen_dialog);
+            loadingDialog = new LoadingDialog(this, R.style.full_screen_dialog);
             loadingDialog.setCancelable(false);
-            loadingDialog.show();
-
-            Window window = loadingDialog.getWindow();
-            window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
 
             // Try AAC first.
             String fileName = title + IVoiceChangerConstants.AUDIO_RECORDER_FILE_EXT_M4A;
@@ -430,44 +430,30 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
                 }
             }
         }.start();
+        loadingDialog.show();
+        Window window = loadingDialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
     private void showExistingFileDialog(File outFile, Runnable runnable) {
-//        LayoutInflater inflater = LayoutInflater.from(this);
-//        final View dialogView = inflater.inflate(R.layout.alert_dialog_override_file, null);
-//        final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-//        alertDialog.setView(dialogView);
-//
-//        Button btnOk = dialogView.findViewById(R.id.btnOk);
-//        Button btnCancel = dialogView.findViewById(R.id.btnCancel);
-//
-//        Objects.requireNonNull(btnOk).setOnClickListener(v -> {
-//            outFile.delete();
-//            startSavingAudio(outFile, runnable);
-//            alertDialog.dismiss();
-//            savingRecordDialog.dismiss();
-//        });
-//
-//        Objects.requireNonNull(btnCancel).setOnClickListener(v -> {
-//            alertDialog.cancel();
-//            savingRecordDialog.dismiss();
-//        });
-//
-//        alertDialog.show();
         confirmDialog = new ConfirmDialog(this, new ConfirmDialog.CallBackConfirmDialogListener() {
             @Override
             public void onSelectOk() {
-
+                outFile.delete();
+                startSavingAudio(outFile, runnable);
+                confirmDialog.dismiss();
             }
 
             @Override
             public void onSelectCancel() {
-
+                confirmDialog.dismiss();
             }
         }, "", getResources().getString(R.string.override_file));
         confirmDialog.show();
         Window window = confirmDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
     /**
@@ -637,17 +623,16 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
         }
 
 
-
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(startX , audioWaveform.getMeasuredHeight() + markerEnd.getHeight() / 2 - mMarkerLeftInset * 2, 0, 0);
+        params.setMargins(startX, audioWaveform.getMeasuredHeight() + markerEnd.getHeight() / 2 - mMarkerLeftInset * 2, 0, 0);
         markerStart.setLayoutParams(params);
 
         params = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(endX , audioWaveform.getMeasuredHeight() + markerEnd.getHeight() / 2 - mMarkerLeftInset * 2, 0, 0);
+        params.setMargins(endX, audioWaveform.getMeasuredHeight() + markerEnd.getHeight() / 2 - mMarkerLeftInset * 2, 0, 0);
         markerEnd.setLayoutParams(params);
     }
 

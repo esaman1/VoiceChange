@@ -88,4 +88,13 @@ public class AppIntroActivity extends AppCompatActivity {
             return 3;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if (tabLayout.getSelectedTabPosition() > 0) {
+            tabLayout.selectTab(tabLayout.getTabAt(tabLayout.getSelectedTabPosition() - 1));
+        } else {
+            finish();
+        }
+    }
 }

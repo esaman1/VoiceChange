@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
@@ -36,7 +37,6 @@ import omrecorder.Recorder;
 
 public class AudioRecorderActivity extends AppCompatActivity implements OnCompletionListener, OnAudioChunkPulledListener {
     private boolean autoStart;
-    private AdView mAdView;
     private AudioChannel channel;
     private int color;
     //private RelativeLayout contentLayout;
@@ -58,6 +58,7 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
     private Timer timer;
     private TextView timerView;
     private VisualizerHandler visualizerHandler;
+    private File file;
 
     private boolean isPlaying() {
         boolean z = false;
@@ -95,6 +96,7 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
 //        this.playView.setImageResource(R.drawable.ic_playyy);
         this.visualizerHandler = new VisualizerHandler();
         if (this.recorder == null) {
+            Log.d("duonghq", "recorder: ");
             this.timerView.setText("00:00:00");
             this.recorder = OmRecorder.wav(new Default(Util.getMic(this.source, this.channel, this.sampleRate), (OnAudioChunkPulledListener) this), new File(this.filePath));
         }
@@ -210,10 +212,6 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
         setContentView((int) R.layout.aar_activity_audio_recorder);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
 
         if (bundle != null) {
             this.filePath = bundle.getString(AndroidAudioRecorder.EXTRA_FILE_PATH);
@@ -232,6 +230,7 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
             this.autoStart = getIntent().getBooleanExtra("autoStart", false);
             z = getIntent().getBooleanExtra("keepDisplayOn", false);
         }
+        file = new File(filePath);
         this.keepDisplayOn = z;
         if (this.keepDisplayOn) {
             getWindow().addFlags(128);
@@ -276,11 +275,17 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
                         new AdCallback() {
                             @Override
                             public void onAdClosed() {
+                                if (file.exists()) {
+                                    file.delete();
+                                }
                                 finish();
                             }
 
                             @Override
                             public void onAdFail() {
+                                if (file.exists()) {
+                                    file.delete();
+                                }
                                 finish();
                             }
                         }, true);
@@ -323,7 +328,7 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
     }
 
     protected void onDestroy() {
-        restartRecording(null);
+        //restartRecording(null);
         setResult(0);
         super.onDestroy();
     }
@@ -339,7 +344,7 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
 //    }
 
     protected void onPause() {
-        restartRecording(null);
+        //restartRecording(null);
         super.onPause();
     }
 
@@ -361,14 +366,20 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
     }
 
     public void restartRecording(View view) {
+        btn_ok.setVisibility(View.GONE);
         if (this.isRecording) {
+            Log.d("duonghq", "restartRecording: isRecording");
             stopRecording();
         } else if (isPlaying()) {
             stopPlaying();
+            Log.d("duonghq", "restartRecording: isPlaying");
         } else {
+            Log.d("duonghq", "restartRecording: !isPlaying");
             this.visualizerHandler = new VisualizerHandler();
             if (this.visualizerHandler != null) {
+                recorder = null;
                 this.visualizerHandler.stop();
+                Log.d("duonghq", "restartRecording: visualizerHandler");
             }
         }
 //        this.statusView.setVisibility(View.INVISIBLE);
@@ -378,6 +389,14 @@ public class AudioRecorderActivity extends AppCompatActivity implements OnComple
         this.timerView.setText("00:00:00");
         this.recorderSecondsElapsed = 0;
         this.playerSecondsElapsed = 0;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(file.exists()){
+            file.delete();
+        }
     }
 
     public void togglePlaying(View view) {

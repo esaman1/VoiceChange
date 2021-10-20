@@ -4,43 +4,56 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/_73sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_media"
+    android:background="@android:color/transparent"
     >
 
-    <SeekBar
-        android:id="@+id/sbAudio"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_30dp"
-        android:thumb="@drawable/ic_thumb"
-        android:progressTint="@color/_5D5FEF"
+        android:background="@drawable/bg_media"
+        android:layout_marginHorizontal="@dimen/_20sdp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
-    <TextView
-        android:id="@+id/tvNameAudio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="zzzzzzzzzzzzzzzzz"
-        android:textSize="@dimen/_16sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginBottom="@dimen/_12sdp"
-        app:layout_constraintTop_toTopOf="@+id/ivPlayAudio"
-        app:layout_constraintStart_toStartOf="@+id/sbAudio"
-        app:layout_constraintBottom_toBottomOf="@+id/ivPlayAudio"
-        />
+        <SeekBar
+            android:id="@+id/sbAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:thumb="@drawable/ic_thumb"
+            android:progressTint="@color/_5D5FEF"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivPlayAudio"
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
-        android:padding="@dimen/_10sdp"
-        app:srcCompat="@drawable/ic_pause_audio"
-        app:layout_constraintEnd_toEndOf="@+id/sbAudio"
-        app:layout_constraintTop_toBottomOf="@+id/sbAudio"
-        />
+        <TextView
+            android:id="@+id/tvNameAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zzzzzzzzzzzzzzzzz"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="@+id/ivPlayAudio"
+            app:layout_constraintStart_toStartOf="@+id/sbAudio"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlayAudio"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlayAudio"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_pause_audio"
+            app:layout_constraintEnd_toEndOf="@+id/sbAudio"
+            app:layout_constraintTop_toBottomOf="@+id/sbAudio"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

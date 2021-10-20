@@ -53,19 +53,19 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -86,7 +86,8 @@
 
         <activity
             android:name="com.voicechanger.soundeffect.soundchanger.activity.AppIntroActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTask"/>
 
         <activity
             android:name=".activity.TrimAudioActivity"

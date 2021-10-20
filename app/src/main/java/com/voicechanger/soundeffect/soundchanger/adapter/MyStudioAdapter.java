@@ -3,6 +3,8 @@ package com.voicechanger.soundeffect.soundchanger.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.Settings;
@@ -18,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,6 +41,11 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
     public ArrayList<String> myList;
     String pth;
     private ConfirmDialog confirmDialog;
+    private ListenerClickPopupMenu listenerClickPopupMenu;
+
+    public void setListenerClickPopupMenu(ListenerClickPopupMenu listenerClickPopupMenu) {
+        this.listenerClickPopupMenu = listenerClickPopupMenu;
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivMore;
@@ -59,6 +67,11 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
         this.context = context;
     }
 
+    public void updateAdapter(ArrayList<String> arrayList){
+        this.myList = arrayList;
+        notifyDataSetChanged();
+    }
+
     public int getItemCount() {
         return this.myList.size();
     }
@@ -74,15 +87,12 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
         myViewHolder.ll.setOnClickListener(new OnClickListener() {
             @SuppressLint("WrongConstant")
             public void onClick(View view) {
-//                Intent intent = new Intent(Intent.ACTION_VIEW);
-//                intent.setFlags(268435456);
-//                intent.setDataAndType(Uri.fromFile(file), "audio/*");
-//                MyStudioAdapter.this.context.startActivity(intent);
                 MediaDialog mediaDialog = new MediaDialog(context, stringBuilder.toString());
                 mediaDialog.setCancelable(true);
                 mediaDialog.show();
                 Window window = mediaDialog.getWindow();
                 window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
             }
@@ -112,19 +122,16 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
         TextView tvNotification = view.findViewById(R.id.tvNotification);
 
         tvEdit.setOnClickListener((OnClickListener) v -> {
-            Intent intent = new Intent(((MyStudioActivity) MyStudioAdapter.this.context), TrimAudioActivity.class);
-            intent.putExtra(Common.EXTRA_AUDIO_URI, file.getPath());
-            ((MyStudioActivity) MyStudioAdapter.this.context).startActivity(intent);
+            if(listenerClickPopupMenu != null){
+                listenerClickPopupMenu.onSelectEdit(file.getPath());
+            }
             popupWindow.dismiss();
         });
         tvShare.setOnClickListener(v -> {
-            if (file.exists() && file.isFile()) {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("audio/*");
-                intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-                ((MyStudioActivity) MyStudioAdapter.this.context).startActivity(Intent.createChooser(intent, "Share Via"));
-                popupWindow.dismiss();
+            if(listenerClickPopupMenu != null){
+                listenerClickPopupMenu.onSelectShare(file);
             }
+            popupWindow.dismiss();
         });
         tvDelete.setOnClickListener(v -> {
             confirmDialog = new ConfirmDialog(context, new ConfirmDialog.CallBackConfirmDialogListener() {
@@ -132,6 +139,7 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
                 public void onSelectOk() {
                     if (file.exists()) {
                         file.delete();
+                        Toast.makeText(context, R.string.text_delete_success, Toast.LENGTH_SHORT).show();
                     }
                     myList.remove(position);
                     notifyDataSetChanged();
@@ -146,19 +154,20 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
             confirmDialog.show();
             Window window = confirmDialog.getWindow();
             window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             popupWindow.dismiss();
         });
         tvRingtone.setOnClickListener(v -> {
-            if (file.isFile()) {
-                startActivity(context, new Intent(Settings.ACTION_SOUND_SETTINGS), null);
-                popupWindow.dismiss();
+            if(listenerClickPopupMenu != null){
+                listenerClickPopupMenu.onSelectRingtone(file);
             }
+            popupWindow.dismiss();
         });
         tvNotification.setOnClickListener(v -> {
-            if (file.isFile()) {
-                startActivity(context, new Intent(Settings.ACTION_SOUND_SETTINGS), null);
-                popupWindow.dismiss();
+            if (listenerClickPopupMenu != null) {
+                listenerClickPopupMenu.onSelectNotification(file);
             }
+            popupWindow.dismiss();
         });
 
         int[] values = new int[2];
@@ -182,5 +191,13 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
 
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         return new MyViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.song_list_row, viewGroup, false));
+    }
+
+    public interface ListenerClickPopupMenu {
+        void onSelectEdit(String filePath);
+        void onSelectShare(File file);
+        void onSelectDelete(String filePath);
+        void onSelectRingtone(File file);
+        void onSelectNotification(File file);
     }
 }

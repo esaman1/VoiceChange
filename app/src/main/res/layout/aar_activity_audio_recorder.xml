@@ -6,30 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color756CFB">
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
-        tools:ignore="MissingConstraints"
-        ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintEnd_toEndOf="parent">
 
-    </com.google.android.gms.ads.AdView>
-
-<!--    <ImageView-->
-<!--        android:id="@+id/restart"-->
-<!--        android:background="@drawable/border2"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:onClick="restartRecording"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:padding="5dp"-->
-<!--        android:layout_below="@+id/record"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:src="@drawable/ic_refresh_black_24dp"-->
-<!--        />-->
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btn_ok"
