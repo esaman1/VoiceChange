@@ -10,12 +10,13 @@
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
       <configuration>
-        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../../nativetemplates/build" />
         <option name="BUILDABLE" value="false" />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../nativetemplates/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../nativetemplates/out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../nativetemplates">
       <excludeFolder url="file://$MODULE_DIR$/../../../nativetemplates/.gradle" />

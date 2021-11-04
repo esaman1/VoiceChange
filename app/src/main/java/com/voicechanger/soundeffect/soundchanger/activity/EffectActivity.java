@@ -25,7 +25,7 @@ import android.widget.ListView;
 import androidx.core.content.FileProvider;
 
 import com.un4seen.bass.BASS;
-import com.voicechanger.soundeffect.soundchanger.MyApplication;
+import com.voicechanger.soundeffect.soundchanger.AudioApplication;
 import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
 import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmSaveAudioDialog;
 import com.voicechanger.soundeffect.soundchanger.R;
@@ -477,7 +477,7 @@ public class EffectActivity extends DBFragmentActivity implements OnEffectListen
             values.put(MediaStore.MediaColumns.DATE_MODIFIED, System.currentTimeMillis());
             values.put(MediaStore.MediaColumns.SIZE, file.length());
 
-            MyApplication.appContext.getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
+            AudioApplication.appContext.getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
         }
     }
 

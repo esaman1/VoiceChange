@@ -2,14 +2,10 @@ package com.voicechanger.soundeffect.soundchanger.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Environment;
-import android.provider.Settings;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,17 +20,12 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.voicechanger.soundeffect.soundchanger.Common;
 import com.voicechanger.soundeffect.soundchanger.dialog.ConfirmDialog;
 import com.voicechanger.soundeffect.soundchanger.R;
-import com.voicechanger.soundeffect.soundchanger.activity.MyStudioActivity;
-import com.voicechanger.soundeffect.soundchanger.activity.TrimAudioActivity;
 import com.voicechanger.soundeffect.soundchanger.dialog.MediaDialog;
 
 import java.io.File;
 import java.util.ArrayList;
-
-import static androidx.core.content.ContextCompat.startActivity;
 
 public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyViewHolder> {
     public Context context;
@@ -115,18 +106,26 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
 
         // inflate your layout or dynamically add view
 
-        TextView tvEdit = view.findViewById(R.id.tvEdit);
+        TextView tvCut = view.findViewById(R.id.tvCut);
+        TextView tvEditEffect = view.findViewById(R.id.tvEditEffect);
         TextView tvShare = view.findViewById(R.id.tvShare);
         TextView tvDelete = view.findViewById(R.id.tvDelete);
         TextView tvRingtone = view.findViewById(R.id.tvRingtone);
         TextView tvNotification = view.findViewById(R.id.tvNotification);
 
-        tvEdit.setOnClickListener((OnClickListener) v -> {
+        tvCut.setOnClickListener((OnClickListener) v -> {
             if(listenerClickPopupMenu != null){
-                listenerClickPopupMenu.onSelectEdit(file.getPath());
+                listenerClickPopupMenu.onSelectCut(file.getPath());
             }
             popupWindow.dismiss();
         });
+
+        tvEditEffect.setOnClickListener(v -> {
+            if(listenerClickPopupMenu != null){
+                listenerClickPopupMenu.onSelectEditEffect(file.getPath());
+            }
+        });
+
         tvShare.setOnClickListener(v -> {
             if(listenerClickPopupMenu != null){
                 listenerClickPopupMenu.onSelectShare(file);
@@ -194,7 +193,8 @@ public class MyStudioAdapter extends RecyclerView.Adapter<MyStudioAdapter.MyView
     }
 
     public interface ListenerClickPopupMenu {
-        void onSelectEdit(String filePath);
+        void onSelectCut(String filePath);
+        void onSelectEditEffect(String filePath);
         void onSelectShare(File file);
         void onSelectDelete(String filePath);
         void onSelectRingtone(File file);

@@ -3,6 +3,8 @@
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32ef44bb2371105bad50e112ba1e43fd/jetified-floatingactionbutton-1.10.1/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c54b74f14b51f44f7251edaba4f9fde1/jetified-floatingactionbutton-1.10.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08386a4d6bf6cb46c57e5886c6ee749/jetified-floatingactionbutton-1.10.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c8fbe5853e8b5cf1e145268b7270f84/jetified-floatingactionbutton-1.10.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32ef44bb2371105bad50e112ba1e43fd/jetified-floatingactionbutton-1.10.1/AndroidManifest.xml" />
@@ -11,6 +13,12 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c54b74f14b51f44f7251edaba4f9fde1/jetified-floatingactionbutton-1.10.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c54b74f14b51f44f7251edaba4f9fde1/jetified-floatingactionbutton-1.10.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c54b74f14b51f44f7251edaba4f9fde1/jetified-floatingactionbutton-1.10.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08386a4d6bf6cb46c57e5886c6ee749/jetified-floatingactionbutton-1.10.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08386a4d6bf6cb46c57e5886c6ee749/jetified-floatingactionbutton-1.10.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a08386a4d6bf6cb46c57e5886c6ee749/jetified-floatingactionbutton-1.10.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c8fbe5853e8b5cf1e145268b7270f84/jetified-floatingactionbutton-1.10.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c8fbe5853e8b5cf1e145268b7270f84/jetified-floatingactionbutton-1.10.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c8fbe5853e8b5cf1e145268b7270f84/jetified-floatingactionbutton-1.10.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.i2p.android.ext/floatingactionbutton/1.10.1/29b6b3af344c51c91af85b9dc774bef043ab1d75/floatingactionbutton-1.10.1-javadoc.jar!/" />

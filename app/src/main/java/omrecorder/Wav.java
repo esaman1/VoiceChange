@@ -6,9 +6,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 
 
-import com.example.storage.RecordFileManagerImpl;
-import com.example.storage.database.RecordFileRoomDatabase;
-import com.voicechanger.soundeffect.soundchanger.MyApplication;
+import com.voicechanger.soundeffect.soundchanger.AudioApplication;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -46,7 +44,6 @@ final class Wav extends AbstractRecorder {
 //            RecordFileRoomDatabase.databaseWriteExecutor.execute(() -> {
 //                recordFileManagerIml.save(b.getPath());
 //            });
-            Log.d("duonghq", "writeWavHeader: ");
            // insertToMediaStore(this.b);
 
         } catch (IOException e) {
@@ -68,7 +65,7 @@ final class Wav extends AbstractRecorder {
             values.put(MediaStore.MediaColumns.DATE_MODIFIED, System.currentTimeMillis());
             values.put(MediaStore.MediaColumns.SIZE, file.length());
 
-            MyApplication.appContext.getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
+            AudioApplication.appContext.getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
         }
     }
 }

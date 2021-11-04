@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c510394dc8fd7bc422d8a9f42f29b35/jetified-libopus-1.3.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c510394dc8fd7bc422d8a9f42f29b35/jetified-libopus-1.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c510394dc8fd7bc422d8a9f42f29b35/jetified-libopus-1.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c510394dc8fd7bc422d8a9f42f29b35/jetified-libopus-1.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c510394dc8fd7bc422d8a9f42f29b35/jetified-libopus-1.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.axet/libopus/1.3.1/88f8c0c80e4165b17df976c9615ad1f963aadbb9/libopus-1.3.1-javadoc.jar!/" />

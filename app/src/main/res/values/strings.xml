@@ -35,5 +35,12 @@
     <string name="premium">subcription_remove_ads_month</string>
     <string name="product_id">demo_poduct</string>
     <string name="text_delete_success">Xóa thành công</string>
+    <string name="recording_title">Recording</string>
+    <string name="pause_title">Pause…</string>
+    <string name="encoding_title">Encoding…</string>
+    <string name="record_button">Record</string>
+    <string name="text_cut">Cut</string>
+    <string name="text_edit_effect">Edit Effect</string>
+    <string name="text_edit_success">Successfully!</string>
 
 </resources>

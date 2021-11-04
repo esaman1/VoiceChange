@@ -4,9 +4,13 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5d170ecb1c3587c587926c6edb1d0be/jetified-AdmobUtilsLibrary-4.5.7/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Namdh1212/AdmobUtilsLibrary/4.5.7/8125c1a41c207cc615c00a2737eb0e10ec4ea46/AdmobUtilsLibrary-4.5.7-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Namdh1212/AdmobUtilsLibrary/4.5.7/8125c1a41c207cc615c00a2737eb0e10ec4ea46/AdmobUtilsLibrary-4.5.7-sources.jar!/" />
     </SOURCES>
   </library>

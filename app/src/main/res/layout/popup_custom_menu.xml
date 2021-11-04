@@ -8,15 +8,28 @@
     >
 
     <TextView
-        android:id="@+id/tvEdit"
+        android:id="@+id/tvCut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawablePadding="@dimen/_16dp"
-        android:text="@string/text_edit"
+        android:text="@string/text_cut"
         android:textSize="@dimen/_16sp"
         android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
         android:background="?attr/selectableItemBackground"
-        app:drawableStartCompat="@drawable/ic_edit2" />
+        app:drawableStartCompat="@drawable/ic_cut" />
+
+    <TextView
+        android:id="@+id/tvEditEffect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_16dp"
+        android:text="@string/text_edit_effect"
+        android:textSize="@dimen/_16sp"
+        android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:background="?attr/selectableItemBackground"
+        app:drawableStartCompat="@drawable/ic_edit_effect" />
 
     <TextView
         android:id="@+id/tvShare"
@@ -25,6 +38,7 @@
         android:drawablePadding="@dimen/_16dp"
         android:text="@string/text_share"
         android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
         android:background="?attr/selectableItemBackground"
         app:drawableStartCompat="@drawable/ic_share2" />
 
@@ -35,6 +49,7 @@
         android:drawablePadding="@dimen/_16dp"
         android:text="@string/text_delete"
         android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
         android:background="?attr/selectableItemBackground"
         app:drawableStartCompat="@drawable/ic_delete" />
 
@@ -45,6 +60,7 @@
         android:drawablePadding="@dimen/_16dp"
         android:text="@string/text_ringtone"
         android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
         android:background="?attr/selectableItemBackground"
         app:drawableStartCompat="@drawable/ic_ringtone" />
 
@@ -54,6 +70,7 @@
         android:layout_height="wrap_content"
         android:drawablePadding="@dimen/_16dp"
         android:padding="@dimen/_15dp"
+        android:fontFamily="@font/product_sans_regular"
         android:text="@string/text_notification"
         android:background="?attr/selectableItemBackground"
         app:drawableStartCompat="@drawable/ic_notification" />

@@ -33,7 +33,7 @@ public class VoiceChangeFireBase extends FirebaseMessagingService{
     private void createNotification(String title, String body){
         Intent intent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent =  PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, AudioApplication.CHANNEL_ID)
                 .setContentTitle(title)
                 .setContentText(body)
                 .setSmallIcon(R.mipmap.ic_launcher)

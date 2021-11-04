@@ -15,7 +15,7 @@ public class AndroidAudioRecorder {
     protected static final String EXTRA_AUTO_START = "autoStart";
     protected static final String EXTRA_CHANNEL = "channel";
     protected static final String EXTRA_COLOR = "color";
-    protected static final String EXTRA_FILE_PATH = "filePath";
+    public static final String EXTRA_FILE_PATH = "filePath";
     protected static final String EXTRA_KEEP_DISPLAY_ON = "keepDisplayOn";
     protected static final String EXTRA_SAMPLE_RATE = "sampleRate";
     protected static final String EXTRA_SOURCE = "source";

@@ -89,11 +89,18 @@ public class MyStudioActivity extends AppCompatActivity implements MyStudioAdapt
     }
 
     @Override
-    public void onSelectEdit(String filePath) {
+    public void onSelectCut(String filePath) {
         Intent intent = new Intent(MyStudioActivity.this, TrimAudioActivity.class);
         intent.putExtra(Common.EXTRA_AUDIO_URI, filePath);
         tapTranslateLauncher.launch(intent);
 
+    }
+
+    @Override
+    public void onSelectEditEffect(String filePath) {
+        Intent intent = new Intent(this, EffectActivity.class);
+        intent.putExtra(IVoiceChangerConstants.KEY_PATH_AUDIO, filePath);
+        startActivity(intent);
     }
 
     @Override

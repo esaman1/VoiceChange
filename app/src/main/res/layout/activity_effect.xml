@@ -28,7 +28,7 @@
         android:text="Edit Effects"
         android:textColor="@color/color444E72"
         android:textSize="20.0sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/product_sans_bold"
         android:layout_marginStart="@dimen/_30dp"
         ads:layout_constraintStart_toEndOf="@+id/ivBack"
         ads:layout_constraintTop_toTopOf="@+id/ivBack"

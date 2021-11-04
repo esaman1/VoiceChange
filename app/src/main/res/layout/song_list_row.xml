@@ -34,11 +34,11 @@
             android:paddingEnd="@dimen/_10dp"
             android:layout_weight="1.0"
             android:ellipsize="end"
-            android:fontFamily="serif"
+            android:fontFamily="@font/product_sans_medium"
             android:gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/text_name"
-            android:textColor="#ff000000"
+            android:textColor="@color/color59597C"
             android:textSize="@dimen/_17sp" />
 
         <androidx.appcompat.widget.AppCompatImageView

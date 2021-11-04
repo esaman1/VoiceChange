@@ -12,14 +12,18 @@ import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import com.voicechanger.soundeffect.soundchanger.R;
 
+import java.io.File;
+
 public class MediaDialog extends Dialog {
     private ImageView ivPlayAudio;
     private MediaPlayer mediaPlayer;
+    private TextView tvNameAudio;
     private String url = "";
     private SeekBar sbAudio;
     private Handler handler = new Handler(Looper.getMainLooper());
@@ -42,23 +46,23 @@ public class MediaDialog extends Dialog {
         setContentView(R.layout.dialog_media);
         ivPlayAudio = findViewById(R.id.ivPlayAudio);
         sbAudio = findViewById(R.id.sbAudio);
+        tvNameAudio = findViewById(R.id.tvNameAudio);
 
+
+        tvNameAudio.setText(new File(url).getName());
         sbAudio.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                Log.d("duonghq", "onProgressChanged: " + progress);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                Log.d("duonghq", "onStartTrackingTouch: ");
                 mediaPlayer.pause();
                 ivPlayAudio.setImageResource(R.drawable.ic_play_audio);
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Log.d("duonghq", "onStopTrackingTouch: " + sbAudio.getProgress());
                 mediaPlayer.seekTo(sbAudio.getProgress());
                 mediaPlayer.start();
                 ivPlayAudio.setImageResource(R.drawable.ic_pause_audio);
