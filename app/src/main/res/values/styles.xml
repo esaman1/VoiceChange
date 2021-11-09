@@ -7,14 +7,26 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:fontFamily">@font/lato_medium</item>
     </style>
+    <style name="TabTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+<!--        <item name="colorAccent">@color/tab</item>-->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+    </style>
 
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyte</item>
+    </style>
+    <style name="BottomSheetStyte" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
     <style name="RecThemeLight" parent="AppThemeLight">
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="recColor">@color/audio_rec_color</item>
         <item name="cutColor">@color/audio_cut_color</item>
         <item name="fontFamily">@font/montserrat</item>
     </style>
-
     <style name="SearchViewTheme" parent="Widget.AppCompat.SearchView">-->
         <item name="searchHintIcon">@null</item>
         <item name="closeIcon">@drawable/ic_close_24dp</item>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_73sdp"
+    android:orientation="vertical"
+    android:layout_height="@dimen/_90sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/transparent"
     >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="@drawable/bg_media"
         android:layout_marginHorizontal="@dimen/_20sdp"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,48 +19,43 @@
         >
 
         <TextView
+            android:layout_marginLeft="@dimen/_15dp"
             android:id="@+id/tvNameAudio"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="zzzzzzzzzzzzzzzzz"
             android:textSize="@dimen/_16sp"
             android:singleLine="true"
-            android:fontFamily="@font/product_sans_regular"
             android:textColor="@color/black"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_12sdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            android:layout_marginTop="@dimen/_12sdp"/>
+<!--        android:fontFamily="@font/product_sans_regular"-->
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivPlayAudio"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
-            android:padding="@dimen/_10sdp"
-            app:srcCompat="@drawable/ic_pause_audio"
-            app:layout_constraintStart_toStartOf="@+id/tvNameAudio"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameAudio"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPlayAudio"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_10sdp"
+                app:srcCompat="@drawable/ic_pause_audio"
+                />
 
-        <SeekBar
-            android:id="@+id/sbAudio"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:thumb="@drawable/ic_thumb"
-            android:progressTint="@color/_5D5FEF"
-            app:layout_constraintTop_toTopOf="@+id/ivPlayAudio"
-            app:layout_constraintBottom_toBottomOf="@+id/ivPlayAudio"
-            app:layout_constraintStart_toEndOf="@+id/ivPlayAudio"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="UnusedAttribute" />
+            <SeekBar
+                android:id="@+id/sbAudio"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_210sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:thumb="@drawable/ic_thumb"
+                android:progressTint="@color/_5D5FEF"
+                tools:ignore="UnusedAttribute" />
+        </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

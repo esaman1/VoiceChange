@@ -14,7 +14,7 @@
         android:orientation="horizontal"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivLoading"
+        android:id="@+id/ivLoadingDialog"
         android:layout_width="@dimen/_186dp"
         android:layout_height="@dimen/_186dp"
         app:layout_constraintBottom_toTopOf="@+id/glView"
@@ -32,11 +32,12 @@
         android:gravity="center"
         android:textAllCaps="true"
         android:text="@string/text_cancel"
-        android:fontFamily="@font/product_sans_regular"
         android:background="@drawable/bg_cancel"
         android:layout_marginBottom="@dimen/_72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+<!--    android:fontFamily="@font/product_sans_regular"-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

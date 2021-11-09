@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.voicechanger.soundeffect.soundchanger">
+    package="com.mp3cutter.voicechanger.soundeffect.soundchanger">
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+<!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
     <application
         android:name=".AudioApplication"
@@ -22,11 +24,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.EditEffectSuccess"></activity>
+        <activity
+            android:name=".activity.PrivaciActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SavedSuccessfully"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Mystudio2"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MenuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.EditEffectSuccess" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -34,7 +56,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.voicechanger.soundeffect.soundchanger.provider"
+            android:authorities=".provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -48,28 +70,16 @@
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
-        <service
-            android:name=".service.TerminalService"
-            android:process=":update_service"></service>
+        </service> <!-- <service -->
+        <!-- android:name=".service.TerminalService" -->
+        <!-- android:process=":update_service" /> -->
         <service android:name=".services.RecordingService" />
 
-        <activity
-            android:name=".activity.SplashScreenActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".androidaudiorecorder.AudioRecorderActivity"
             android:launchMode="singleInstance"
@@ -94,6 +104,10 @@
             android:label="@string/trim_audio"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.igortrncic.dotted-progress-bar:library:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a29f4e9df275c97b2557c76f4402546/jetified-library-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a29f4e9df275c97b2557c76f4402546/jetified-library-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a29f4e9df275c97b2557c76f4402546/jetified-library-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.igortrncic.dotted-progress-bar/library/1.0.0/ebe9f7d5637734260ddb938246b028258b219333/library-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.igortrncic.dotted-progress-bar/library/1.0.0/471751080e0bec60e250463107c738f408a2896b/library-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

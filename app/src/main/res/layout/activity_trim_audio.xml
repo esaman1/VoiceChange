@@ -14,14 +14,14 @@
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back_2" />
+        app:srcCompat="@drawable/back_cut" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/_30dp"
         android:gravity="center"
-        android:text="My Creation"
+        android:text="Cut Audio"
         android:textColor="@color/color444E72"
         android:textSize="20.0sp"
         android:textStyle="bold"
@@ -78,8 +78,7 @@
             android:layout_marginTop="11dp"
             android:layout_marginEnd="@dimen/_15dp"
             android:weightSum="2"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivZoomIn"
@@ -87,8 +86,7 @@
                 android:layout_height="0dp"
                 app:srcCompat="@drawable/ic_zoom_in"
                 android:layout_weight="1"
-                android:padding="@dimen/_7dp"
-                />
+                android:padding="@dimen/_7dp" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivZoomOut"
@@ -96,8 +94,7 @@
                 android:layout_height="0dp"
                 app:srcCompat="@drawable/ic_zoom_out"
                 android:layout_weight="1"
-                android:padding="@dimen/_7dp"
-                />
+                android:padding="@dimen/_7dp" />
 
         </LinearLayout>
 
@@ -195,7 +192,7 @@
         android:layout_marginBottom="@dimen/margin_bottom_btn"
         android:background="@drawable/bg_button_trim"
         android:text="@string/cancel"
-        android:textColor="@color/color8E7CFF"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnReset"
@@ -208,7 +205,7 @@
         android:layout_marginBottom="@dimen/margin_bottom_btn"
         android:background="@drawable/bg_button_trim"
         android:text="@string/reset"
-        android:textColor="@color/color8E7CFF"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -219,9 +216,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_btn"
-        android:background="@drawable/bg_button_trim_cut"
+        android:background="@drawable/bg_button_trim"
         android:text="@string/cut"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

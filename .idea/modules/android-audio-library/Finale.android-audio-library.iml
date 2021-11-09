@@ -27,6 +27,8 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../android-audio-library/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../android-audio-library/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../android-audio-library">
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/src/main/java" isTestSource="false" />
@@ -34,6 +36,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../android-audio-library/build/generated/res/resValues/debug" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../android-audio-library/.gradle" />

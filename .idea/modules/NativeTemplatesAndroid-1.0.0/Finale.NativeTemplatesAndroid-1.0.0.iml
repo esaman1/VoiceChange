@@ -27,12 +27,16 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0">
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../NativeTemplatesAndroid-1.0.0/src/main/res" type="java-resource" />

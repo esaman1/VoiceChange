@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "338243998281",
-    "project_id": "voice-changer-c4b9b",
-    "storage_bucket": "voice-changer-c4b9b.appspot.com"
+    "project_number": "399279195144",
+    "project_id": "soundchanger-2f26c",
+    "storage_bucket": "soundchanger-2f26c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:338243998281:android:db41ab5e54e9dc71362598",
+        "mobilesdk_app_id": "1:399279195144:android:ffc992adcc3ac0d6cbfdbd",
         "android_client_info": {
-          "package_name": "com.voicechanger.soundeffect.soundchanger"
+          "package_name": "com.mp3cutter.voicechanger.soundeffect.soundchanger"
         }
       },
       "oauth_client": [
         {
-          "client_id": "338243998281-p29lo6rbn9c0ff2d2t7dv918vhi9k0je.apps.googleusercontent.com",
+          "client_id": "399279195144-qtmpubgjjue4julria7u6j3o17646q0v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBDeXz45MafyD8YLfbydvG1736hz1fVHpc"
+          "current_key": "AIzaSyAaiooTXOi28skAcm0E3pxi9sKYmoVGdQA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "338243998281-p29lo6rbn9c0ff2d2t7dv918vhi9k0je.apps.googleusercontent.com",
+              "client_id": "399279195144-qtmpubgjjue4julria7u6j3o17646q0v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,15 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-ads-lite:15.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cfae584455406d07f55fa962ed725ce/jetified-play-services-ads-lite-15.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cfae584455406d07f55fa962ed725ce/jetified-play-services-ads-lite-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cfae584455406d07f55fa962ed725ce/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/440c6ffe47f948a02ff60ccbb3f7319f/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/440c6ffe47f948a02ff60ccbb3f7319f/jetified-play-services-ads-lite-15.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/440c6ffe47f948a02ff60ccbb3f7319f/jetified-play-services-ads-lite-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/226eb102df15904caf5c3c9c69ac6496/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/226eb102df15904caf5c3c9c69ac6496/jetified-play-services-ads-lite-15.0.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/226eb102df15904caf5c3c9c69ac6496/jetified-play-services-ads-lite-15.0.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d12cac1f3f99c310db0820c76a1409f/jetified-play-services-ads-lite-15.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d12cac1f3f99c310db0820c76a1409f/jetified-play-services-ads-lite-15.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d12cac1f3f99c310db0820c76a1409f/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

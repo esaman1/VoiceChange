@@ -37,10 +37,10 @@
             tools:text="abcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
             android:gravity="center"
             android:singleLine="true"
-            android:fontFamily="@font/product_sans_regular"
+
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
             />
-
+<!--        android:fontFamily="@font/product_sans_regular"-->
         <TextView
             android:id="@+id/tvOke"
             android:layout_width="0dp"

@@ -1,26 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-ads-identifier:16.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a86e1eee0c56135cbdcd8fa14f5c5f61/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a86e1eee0c56135cbdcd8fa14f5c5f61/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58947c716918fcb886c4c7782559ac9e/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58947c716918fcb886c4c7782559ac9e/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58947c716918fcb886c4c7782559ac9e/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e422b000b870f934feb75803ab218fcc/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2297eac0a546ff957ab45a885f96791f/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7e3872c4ab9bcd7855b9b4e2c17a58b/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b97de80c348366175f3db6144432ba9/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b97de80c348366175f3db6144432ba9/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b97de80c348366175f3db6144432ba9/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/981ed2884362a18c1797b3522308545e/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/981ed2884362a18c1797b3522308545e/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/981ed2884362a18c1797b3522308545e/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9c4ceeecaf1a6581759017e41bf625cb/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9c4ceeecaf1a6581759017e41bf625cb/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9c4ceeecaf1a6581759017e41bf625cb/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a96b29ec982df78590498876f360d2d1/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a96b29ec982df78590498876f360d2d1/jetified-play-services-ads-identifier-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a96b29ec982df78590498876f360d2d1/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b345f465796080f4755fb0ba72197e08/jetified-play-services-ads-identifier-16.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b345f465796080f4755fb0ba72197e08/jetified-play-services-ads-identifier-16.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b345f465796080f4755fb0ba72197e08/jetified-play-services-ads-identifier-16.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

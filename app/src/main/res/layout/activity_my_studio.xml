@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFAFAFA"
+    android:background="@drawable/effect_bg"
     >
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -15,7 +15,7 @@
         android:layout_marginStart="@dimen/_12dp"
         android:layout_marginTop="@dimen/_40dp"
         android:padding="10dp"
-        ads:srcCompat="@drawable/ic_back_2"
+        ads:srcCompat="@drawable/icon_back"
         ads:layout_constraintStart_toStartOf="parent"
         ads:layout_constraintTop_toTopOf="parent"
         />
@@ -25,7 +25,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="My Creation"
-        android:textColor="@color/color444E72"
+        android:textColor="@color/white"
         android:textSize="20.0sp"
         android:textStyle="bold"
         android:fontFamily="@font/product_sans_bold"

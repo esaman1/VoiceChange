@@ -1,50 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorFAFAFA"
-    >
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivBack"
-        android:layout_width="@dimen/_50dp"
-        android:layout_height="@dimen/_50dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="@dimen/_12dp"
-        android:layout_marginTop="@dimen/_40dp"
-        android:padding="10dp"
-        ads:srcCompat="@drawable/ic_back_2"
-        ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="Edit Effects"
-        android:textColor="@color/color444E72"
-        android:textSize="20.0sp"
-        android:fontFamily="@font/product_sans_bold"
-        android:layout_marginStart="@dimen/_30dp"
-        ads:layout_constraintStart_toEndOf="@+id/ivBack"
-        ads:layout_constraintTop_toTopOf="@+id/ivBack"
-        ads:layout_constraintBottom_toBottomOf="@+id/ivBack"
-        />
-
-    <ListView
-        android:id="@+id/list_effects"
+    android:background="@drawable/effect_bg">
+    <LinearLayout
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:divider="@null"
-        android:dividerHeight="0.0dip"
-        android:scrollbars="none"
-        android:layout_marginTop="@dimen/_25dp"
-        ads:layout_constraintTop_toBottomOf="@+id/ivBack"
-        ads:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_effects"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_12dp"
+            android:padding="10dp"
+            ads:srcCompat="@drawable/icon_back"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Voice Effects"
+            android:textColor="@color/white"
+            android:textSize="20.0sp"
+            android:fontFamily="@font/product_sans_bold"
+            android:layout_marginStart="@dimen/_30dp"
+            ads:layout_constraintStart_toEndOf="@+id/ivBack"
+            ads:layout_constraintTop_toTopOf="@+id/ivBack"
+            ads:layout_constraintBottom_toBottomOf="@+id/ivBack" />
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ibSave"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"
+                android:padding="10dp"
+                ads:srcCompat="@drawable/ic_baseline_check_24" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/bg_efff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/sbAudio1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/ic_thumb"
+            android:progressTint="@color/white"
+            tools:ignore="UnusedAttribute" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/play_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/bg_efff"
+                android:padding="16dp"
+                android:src="@drawable/icon_play" />
+
+            <TextView
+                android:id="@+id/txtTimeDurationStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTimeDurationEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/mute"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_margin="@dimen/_16dp"
+                android:background="@drawable/volumehigh"
+                android:padding="16dp"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:background="@drawable/bg_grid_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="center"
+                android:layout_margin="@dimen/_20dp"
+                android:textSize="@dimen/_20dp"
+                android:textStyle="bold"
+                android:text="Change Voice"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <GridView
+                android:gravity="center"
+                android:id="@+id/list_effects"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:numColumns="3"
+                tools:listitem="@layout/item_effects" />
+        </LinearLayout>
+
+</LinearLayout>

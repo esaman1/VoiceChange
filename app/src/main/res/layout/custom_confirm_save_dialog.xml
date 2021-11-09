@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:padding="@dimen/_20dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/transparent"
     >
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/bg_dialog_confirm"
         >
@@ -19,66 +19,60 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Name"
+            android:text="Saving"
             style="@style/TitleDialog"
-            android:layout_marginTop="@dimen/_24dp"
+            android:layout_margin="@dimen/_20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etContent"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50dp"
-            android:layout_marginTop="@dimen/_16dp"
-            android:layout_marginStart="@dimen/_24dp"
-            android:layout_marginEnd="@dimen/_24dp"
             android:padding="@dimen/_10dp"
             tools:text="abcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
             android:gravity="center"
             android:singleLine="true"
-            android:fontFamily="@font/product_sans_regular"
+            android:layout_marginBottom="@dimen/_20dp"
             android:background="@drawable/bg_edt_dialog_confirm"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            />
-
-        <TextView
-            android:id="@+id/tvSkip"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_50dp"
-            android:layout_marginEnd="@dimen/_4dp"
-            android:layout_marginTop="@dimen/_16dp"
-            android:layout_marginBottom="@dimen/_24dp"
-            android:background="@drawable/bg_iv_skip"
-            android:text="@string/text_skip"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+<!--        android:fontFamily="@font/product_sans_regular"-->
+        <LinearLayout
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_weight="2"
             android:gravity="center"
-            android:textSize="@dimen/text_size_14sp"
-            android:textColor="@color/color80151920"
-            android:fontFamily="@font/product_sans_bold"
-            app:layout_constraintStart_toStartOf="@+id/etContent"
-            app:layout_constraintTop_toBottomOf="@+id/etContent"
-            app:layout_constraintEnd_toStartOf="@+id/tvOke"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
-        <TextView
-            android:id="@+id/tvOke"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_50dp"
-            android:layout_marginStart="@dimen/_4dp"
-            android:background="@drawable/bg_iv_ok"
-            android:text="@string/text_ok"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_14sp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/product_sans_bold"
-            app:layout_constraintStart_toEndOf="@+id/tvSkip"
-            app:layout_constraintEnd_toEndOf="@+id/etContent"
-            app:layout_constraintTop_toTopOf="@+id/tvSkip"
-            app:layout_constraintBottom_toBottomOf="@+id/tvSkip"
-            />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tvSkip"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/bg_iv_skip"
+                android:fontFamily="@font/product_sans_bold"
+                android:gravity="center"
+                android:text="@string/text_skip"
+                android:textColor="@color/color80151920"
+                android:textSize="@dimen/text_size_14sp" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tvOke"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:background="@drawable/bg_iv_ok"
+                android:fontFamily="@font/product_sans_bold"
+                android:gravity="center"
+                android:text="@string/text_ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 

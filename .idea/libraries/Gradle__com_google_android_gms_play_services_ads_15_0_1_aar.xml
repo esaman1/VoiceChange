@@ -1,15 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-ads:15.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e79ac33b03863c2187d8ac1e003e9146/jetified-play-services-ads-15.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e79ac33b03863c2187d8ac1e003e9146/jetified-play-services-ads-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e79ac33b03863c2187d8ac1e003e9146/jetified-play-services-ads-15.0.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa004c1c0f257f669a19167315f43a33/jetified-play-services-ads-15.0.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa004c1c0f257f669a19167315f43a33/jetified-play-services-ads-15.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa004c1c0f257f669a19167315f43a33/jetified-play-services-ads-15.0.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/665bd0b62b43796e8b809343c70b30ca/jetified-play-services-ads-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/665bd0b62b43796e8b809343c70b30ca/jetified-play-services-ads-15.0.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/665bd0b62b43796e8b809343c70b30ca/jetified-play-services-ads-15.0.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/429ff70cb785e8fee5686e6ff230b3ba/jetified-play-services-ads-15.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/429ff70cb785e8fee5686e6ff230b3ba/jetified-play-services-ads-15.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/429ff70cb785e8fee5686e6ff230b3ba/jetified-play-services-ads-15.0.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

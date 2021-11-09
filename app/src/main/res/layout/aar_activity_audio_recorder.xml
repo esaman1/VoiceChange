@@ -1,81 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/content"
+    android:layout_weight="4"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color756CFB">
+    android:background="#190c40">
 
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/btn_ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:srcCompat="@drawable/btn_ok"
-        android:visibility="invisible"
-        android:background="@android:color/transparent"
-        ads:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_margin="@dimen/_20dp"
+        android:layout_width="@dimen/_25dp"
+        android:layout_height="@dimen/_25dp"
+        android:gravity="center"
         ads:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ib_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:srcCompat="@drawable/btn_cancel"
         ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintBottom_toBottomOf="parent"
-        android:background="@android:color/transparent"/>
+        ads:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
+        <ImageButton
+            android:onClick="back_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_back"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_weight="1"
         android:id="@+id/iv_image_voice"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ads:srcCompat="@drawable/ic_voice_background"
-        android:layout_marginBottom="@dimen/_40dp"
+        ads:srcCompat="@drawable/image_icon"
         ads:layout_constraintStart_toStartOf="parent"
         ads:layout_constraintTop_toTopOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"
         ads:layout_constraintBottom_toBottomOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/record"
-        android:layout_width="@dimen/_70dp"
-        android:layout_height="@dimen/_70dp"
-        ads:srcCompat="@drawable/img_play"
-        android:layout_marginTop="38dp"
-        android:onClick="toggleRecording"
-        ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintTop_toBottomOf="@+id/iv_image_voice"
-        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_recond"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:background="@drawable/bg_recon_play"
+            android:layout_width="5dp"
+            android:layout_height="5dp"/>
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20dp"
+            android:text="@string/text_start_timer"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/product_sans_bold"
+            ads:layout_constraintBottom_toTopOf="@+id/iv_image_voice" />
+    </FrameLayout>
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivRestart"
-        android:layout_width="@dimen/_70dp"
-        android:layout_height="@dimen/_70dp"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
         ads:srcCompat="@drawable/ic_replay"
         android:onClick="restartRecording"
-        android:padding="@dimen/_15dp"
-        android:visibility="invisible"
-        android:layout_marginTop="@dimen/_20dp"
-        ads:layout_constraintTop_toBottomOf="@+id/record"
-        ads:layout_constraintStart_toStartOf="@+id/record"
-        ads:layout_constraintEnd_toEndOf="@+id/record"
-        />
-
-    <TextView
-        android:id="@+id/timer"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="invisible" />
+    <LinearLayout
+        android:gravity="bottom|center_vertical"
+        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_60sp"
-        android:text="@string/text_start_timer"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:layout_marginBottom="58dp"
-        android:fontFamily="@font/product_sans_bold"
-        ads:layout_constraintBottom_toTopOf="@+id/iv_image_voice" />
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ib_cancel"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_weight="2"
+            android:background="@android:color/transparent"
+            android:onClick="back"
+            android:visibility="invisible"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:srcCompat="@drawable/ic_close_24dp" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/record"
+            android:layout_width="301dp"
+            android:layout_height="167dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="toggleRecording"
+            android:paddingTop="@dimen/_20dp"
+            android:scaleType="fitEnd"
+            ads:srcCompat="@drawable/play_icon" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_ok"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:visibility="invisible"
+            ads:srcCompat="@drawable/ic_baseline_check_24"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

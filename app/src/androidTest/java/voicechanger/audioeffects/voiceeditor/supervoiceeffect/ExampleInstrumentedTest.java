@@ -1,4 +1,4 @@
-package com.voicechanger.soundeffect.soundchanger;
+package ;
 
 import android.content.Context;
 
@@ -24,6 +24,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.voicechanger.soundeffect.soundchanger", appContext.getPackageName());
+        assertEquals("", appContext.getPackageName());
     }
 }

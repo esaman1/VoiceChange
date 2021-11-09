@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/llView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50dp"
+        android:layout_height="@dimen/_70dp"
         android:background="@drawable/border_item_effect"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_16dp"
         android:padding="@dimen/_8dp"
         android:layout_marginBottom="@dimen/_4dp"
         android:layout_marginTop="@dimen/_4dp"
-        android:elevation="@dimen/_5dp"
+        android:elevation="2dp"
         >
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivPlay"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/_6dp"
-            app:srcCompat="@drawable/ic_creation"
-            android:tint="@color/icon" />
-
+        <ImageView
+            android:id="@+id/img_item"
+            android:src="@drawable/image_song"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tvName"
             android:layout_width="0dp"
@@ -42,12 +38,31 @@
             android:textSize="@dimen/_17sp" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
+            android:id="@+id/ivPlay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_6dp"
+            app:srcCompat="@drawable/ic_creation"
+            android:tint="@color/icon" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
             android:id="@+id/ivMore"
             android:layout_width="@dimen/_50dp"
             android:layout_height="@dimen/_50dp"
             android:padding="10dp"
             android:layout_gravity="center_vertical"
             app:srcCompat="@drawable/ic_more" />
+        <CheckBox
+            android:id="@+id/checck_box"
+            android:enabled="false"
+            android:buttonTint="@color/black"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
-
+    <include layout="@layout/play_sheet" />
 </LinearLayout>

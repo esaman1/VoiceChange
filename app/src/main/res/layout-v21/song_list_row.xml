@@ -7,17 +7,38 @@
     <LinearLayout
         android:id="@+id/llView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50dp"
+        android:layout_height="@dimen/_70dp"
         android:background="@drawable/border_item_effect"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_16dp"
         android:padding="@dimen/_8dp"
         android:layout_marginBottom="@dimen/_4dp"
         android:layout_marginTop="@dimen/_4dp"
-        android:elevation="@dimen/_5dp"
+        android:elevation="2dp"
         >
+        <ImageView
+            android:id="@+id/img_item"
+            android:src="@drawable/image_song"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:fontFamily="@font/product_sans_medium"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/text_name"
+            android:textColor="@color/color59597C"
+            android:textSize="@dimen/_17sp" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
             android:id="@+id/ivPlay"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -26,27 +47,22 @@
             app:srcCompat="@drawable/ic_creation"
             android:tint="@color/icon" />
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingStart="@dimen/_10dp"
-            android:layout_weight="1.0"
-            android:ellipsize="end"
-            android:fontFamily="serif"
-            android:gravity="center_vertical"
-            android:singleLine="true"
-            android:text="Name"
-            android:textColor="#ff000000"
-            android:textSize="17.0dip" />
-
         <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
             android:id="@+id/ivMore"
             android:layout_width="@dimen/_50dp"
             android:layout_height="@dimen/_50dp"
             android:padding="10dp"
             android:layout_gravity="center_vertical"
             app:srcCompat="@drawable/ic_more" />
+        <CheckBox
+            android:id="@+id/checck_box"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:enabled="false"
+            android:buttonTint="@color/black"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </LinearLayout>
