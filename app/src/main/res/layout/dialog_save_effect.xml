@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_20dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dialog_confirm"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_dialog_confirm"
+        >
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            style="@style/TitleDialog"
+            android:layout_margin="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_save1"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:padding="@dimen/_10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/bg_edt_dialog_confirm"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        <!--        android:fontFamily="@font/product_sans_regular"-->
+        <CheckBox
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:id="@+id/checkbox_save1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:text="Also save the original recording "
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="117dp" />
+        <LinearLayout
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/btn_skip_save1"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/bg_iv_skip"
+                android:fontFamily="@font/product_sans_bold"
+                android:gravity="center"
+                android:text="@string/text_skip"
+                android:textColor="@color/color80151920"
+                android:textSize="@dimen/text_size_14sp" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/btn_ok_save1"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:background="@drawable/bg_iv_ok"
+                android:fontFamily="@font/product_sans_bold"
+                android:gravity="center"
+                android:text="@string/text_ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

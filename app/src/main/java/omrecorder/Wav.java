@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import com.mp3cutter.voicechanger.soundeffect.soundchanger.AudioApplication;
+import com.voicechanger.soundeffect.soundchanger.AudioApplication;
 
 final class Wav extends AbstractRecorder {
     private final RandomAccessFile wavFile;

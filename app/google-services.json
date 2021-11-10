@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:399279195144:android:ffc992adcc3ac0d6cbfdbd",
         "android_client_info": {
-          "package_name": "com.mp3cutter.voicechanger.soundeffect.soundchanger"
+          "package_name": "com.voicechanger.soundeffect.soundchanger"
         }
       },
       "oauth_client": [
